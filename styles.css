@@ -1,0 +1,309 @@
+/* Variables de colores */
+/* Mixin para el borde redondeado */
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+/* Estilo del header */
+header {
+  background-color: #3498db;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+/* Título */
+h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+/* Navegación */
+nav {
+  background-color: #34495e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Sombra del nav */
+  padding: 15px 0;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul li {
+  margin: 0 20px;
+  /* Mayor espaciado entre elementos */
+}
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  /* Transición más suave */
+}
+nav ul li a:hover {
+  background-color: #1abc9c;
+  /* Color de fondo en hover */
+  transform: translateY(-2px);
+  /* Efecto de elevar */
+}
+/* Sección Hero */
+.hero-1 {
+  background-color: #2980b9;
+  color: #ffffff;
+  padding: 50px;
+  text-align: center;
+}
+.hero-1 img {
+  width: 40%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.hero-1 h2 {
+  font-size: 2em;
+}
+.hero-1 p {
+  font-size: 1.2em;
+}
+/* Sección Visión y Misión */
+.vision-mision {
+  padding: 40px;
+  background-color: #ecf0f1;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.vision-mision .container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.vision-mision .columna {
+  width: 45%;
+  padding: 20px;
+  text-align: justify;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.vision-mision .columna h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+.vision-mision .columna p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+.products-services {
+  padding: 50px;
+  background-color: #f5f5f5;
+}
+.products-services h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+.products-services .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 20px;
+}
+.products-services .columna {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1 1 45%;
+  margin-bottom: 20px;
+}
+.products-services .columna h3 {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+.products-services .columna ul {
+  list-style-type: none;
+  padding: 0;
+}
+.products-services .columna ul li {
+  font-size: 1.2rem;
+  color: #555;
+  margin: 10px 0;
+  padding-left: 20px;
+  position: relative;
+}
+.products-services .columna ul li::before {
+  content: "✔";
+  color: #007bff;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.products-services p {
+  text-align: justify;
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 40px;
+}
+/* Estilos para la sección de equipo */
+.equipo {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  /* Estilos responsive para pantallas pequeñas */
+}
+.equipo .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.equipo .container .columna {
+  flex: 0 0 45%;
+  /* Dos columnas por fila */
+  background-color: #ffffff;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.equipo .container .columna:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+.equipo .container .columna h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.equipo .container .columna p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  text-align: justify;
+}
+@media (max-width: 768px) {
+  .equipo .container .columna {
+    flex: 0 0 100%;
+    /* Una columna por fila en pantallas pequeñas */
+  }
+}
+.formulario-contacto {
+  background-color: #ffffff;
+  padding: 40px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.formulario-contacto h3 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.formulario-contacto form {
+  display: flex;
+  flex-direction: column;
+}
+.formulario-contacto form label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.formulario-contacto form input[type="text"],
+.formulario-contacto form input[type="tel"],
+.formulario-contacto form textarea {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.formulario-contacto form input[type="text"]:focus,
+.formulario-contacto form input[type="tel"]:focus,
+.formulario-contacto form textarea:focus {
+  outline: none;
+  border-color: #333;
+}
+.formulario-contacto form textarea {
+  resize: vertical;
+}
+.formulario-contacto form button {
+  padding: 10px;
+  font-size: 1.2em;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.formulario-contacto form button:hover {
+  background-color: #ff9900;
+}
+.formulario-contacto #resultado {
+  margin-top: 20px;
+  font-size: 1.2em;
+  text-align: center;
+}
+.informacion-contacto {
+  background-color: #d2f73f;
+  padding: 40px;
+  /* Responsive */
+}
+.informacion-contacto h3 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.informacion-contacto p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #555;
+}
+.informacion-contacto ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+.informacion-contacto ul li {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+.informacion-contacto ul li strong {
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .informacion-contacto {
+    width: 95%;
+    padding: 20px;
+  }
+}
+/* Footer */
+footer {
+  background-color: #34495e;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+footer p {
+  margin: 0;
+  font-size: 0.9em;
+}

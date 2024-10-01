@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>TechNova</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+</head>
+<body>
+    <header>
+        <h1>TechNova</h1>
+        <nav>
+            <ul>
+                <li><a href="Inicio.html">Inicio</a></li>
+                <li><a href="Acerca_de.html">Acerca de</a></li>
+                <li><a href="Servicios.html">Servicios</a></li>
+                <li><a href="Equipo.html">Equipo</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-1">
+        <img src="Contacto.jpg" alt="Logo TechNova">
+        <h2>Contáctanos</h2>
+        <p>¿Tienes alguna pregunta o comentario? Nos encantaría saber de ti. En TechNova estamos disponibles para ayudarte con tus necesidades tecnológicas. Por favor, completa el formulario de contacto a continuación, y nos pondremos en contacto contigo lo antes posible.</p>
+    </section>
+    <section class="formulario-contacto">
+        <div class="container">
+            <h3>Formulario de Contacto</h3>
+            <form id="contactoForm">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <p id="resultado"></p>
+        </div>
+    </section>
+
+    <section class="informacion-contacto">
+        <h3>Información de Contacto</h3>
+        <p>Puedes ponerte en contacto con nosotros a través de los siguientes medios:</p>
+        
+        <ul>
+            <li><strong>Correo electrónico:</strong> contacto@technova.com</li>
+            <li><strong>Teléfono:</strong> +34 123 456 789</li>
+            <li><strong>Ubicación:</strong> Madrid, España</li>
+        </ul>
+        
+        <p>Nuestra empresa está ubicada en el corazón de Madrid, donde ofrecemos soluciones innovadoras para empresas y clientes de todo el mundo. No dudes en escribirnos o llamarnos para discutir cómo podemos ayudarte a transformar tu negocio con tecnología avanzada.</p>
+    </section>
+    <footer>
+        <p>(c)2024 Desarrollado por Ronaldo Rafael Vazquez</p>
+    </footer>
+
+    
+    <script>
+        document.getElementById('contactoForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+           
+            const nombre = document.getElementById('nombre').value;
+            const apellido = document.getElementById('apellido').value;
+            const telefono = document.getElementById('telefono').value;
+            const mensaje = document.getElementById('mensaje').value;
+
+
+            if (nombre === '' || apellido === '' || telefono === '' || mensaje === '') {
+                document.getElementById('resultado').textContent = 'Por favor, completa todos los campos.';
+                document.getElementById('resultado').style.color = 'red';
+                return;
+            }
+
+            
+            document.getElementById('resultado').textContent = `Gracias, ${nombre} ${apellido}. Hemos recibido tu mensaje y te contactaremos pronto al teléfono ${telefono}.`;
+            document.getElementById('resultado').style.color = 'green';
+            document.getElementById('contactoForm').reset();
+        });
+    </script>
+</body>
+</html>
